@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class FindingsList {
     private ArrayList<String> findings;
@@ -17,40 +15,34 @@ public class FindingsList {
         findings.remove("not rock");
         System.out.println("Data cleaned, non-rock removed. Rocks found: " + findings);
         System.out.println("Perfect!");
-    }
 
-     Thread.sleep(1000);
-    HashMap<String, String> fossilDirectory = new HashMap<>();
 
-System.out.println("Fossil data downloaded");
+        Thread.sleep(1000);
+        HashMap<String, String> fossilDirectory = new HashMap<>();
 
-fossilDirectory.put("Bird Fossil","The fossil has wings implying it was capable of flight");
-fossilDirectory.put("Fish Fossil","The fossil is vaguely fish shaped implies there was once water");
-fossilDirectory.put("Tooth Fossil","The tooth from an unknown fossil");
+        System.out.println("Fossil data downloaded");
 
-System.out.println("Which of the fossils would you like to learn more about (Spelling and Spacing is important)?");
+        fossilDirectory.put("Bird Fossil", "The fossil has wings implying it was capable of flight");
+        fossilDirectory.put("Fish Fossil", "The fossil is vaguely fish shaped implies there was once water");
+        fossilDirectory.put("Tooth Fossil", "The tooth from an unknown fossil");
 
-    Scanner input = new Scanner(System.in);
+        System.out.println("Which of the fossils would you like to learn more about (Spelling and Spacing is important)?");
 
-    String fossilChoice = input.nextLine();
+        Scanner input = new Scanner(System.in);
 
-if(fossilChoice.equalsIgnoreCase("Bird"))
+        String fossilChoice = input.nextLine();
 
-    {
-        System.out.println("Fossil: " + fossilChoice + "\nDescription: " + fossilDirectory.get(fossilChoice));
-    } else if(fossilChoice.equalsIgnoreCase("Fish"))
+        if (fossilChoice.equalsIgnoreCase("Bird")) {
+            System.out.println("Fossil: " + fossilChoice + "\nDescription: " + fossilDirectory.get(fossilChoice));
+        } else if (fossilChoice.equalsIgnoreCase("Fish")) {
+            System.out.println("Fossil: " + fossilChoice + "\nDescription: " + fossilDirectory.get(fossilChoice));
+        } else if (fossilChoice.equalsIgnoreCase("Tooth")) {
+            System.out.println("Fossil: " + fossilChoice + "\nDescription: " + fossilDirectory.get(fossilChoice));
+        }
+        Thread.sleep(700);
+        Thread.sleep(700);
 
-    {
-        System.out.println("Fossil: " + fossilChoice + "\nDescription: " + fossilDirectory.get(fossilChoice));
-    } else if(fossilChoice.equalsIgnoreCase("Tooth"))
-
-    {
-        System.out.println("Fossil: " + fossilChoice + "\nDescription: " + fossilDirectory.get(fossilChoice));
-    }
-    Thread.sleep(700);
-            Thread.sleep(700);
-
-    HashSet<String> supplies = new HashSet<>();
+        HashSet<String> supplies = new HashSet<>();
 
         supplies.add("Teleporter");
         supplies.add("Stun gun");
@@ -58,10 +50,11 @@ if(fossilChoice.equalsIgnoreCase("Bird"))
 
         supplies.remove("Stun gun");
 
-    Iterator itr = supplies.iterator();
+        Iterator itr = supplies.iterator();
 
         while (itr.hasNext()) {
-        System.out.println(itr.next());
+            System.out.println(itr.next());
+        }
     }
 }
 
